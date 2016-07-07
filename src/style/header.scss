@@ -1,0 +1,238 @@
+@import "partials/mixins";
+
+body{
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.6;
+  font-family: "BariolRegular", sans-serif;
+  overflow-x: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.clearfix:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  background-color: #ffffff;
+  z-index: 10005000;
+  .ball {
+    position: absolute;
+    border-radius: 50%;
+    animation: ballPulse 2s ease-in-out infinite;
+    &.ball-1 {
+      top: calc(50% - 35px);
+      left: calc(50% - 35px);
+      width: 70px;
+      height: 70px;
+      opacity: 1
+    }
+    &.ball-2 {
+      top: calc(50% - 30px);
+      left: calc(50% - 30px);
+      width: 60px;
+      height: 60px
+    }
+
+    &.ball-2 {
+      animation-delay: -1s
+    }
+  }
+}
+
+@-webkit-keyframes ballPulse {
+  0% {
+    transform: scale(0)
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0
+  }
+}
+
+@keyframes ballPulse {
+  0% {
+    transform: scale(0)
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0
+  }
+}
+
+.main-header {
+  .navBar {
+    position: relative;
+    padding: 20px 0;
+    .logo {
+      float: left;
+      background: url("img/logo.png") no-repeat left top;
+      span:first-child {
+        font-size: 35px;
+        margin-left: 53px;
+        line-height: 1.3;
+        letter-spacing: 5px;
+      }
+      span:last-child {
+        font-size: 17px;
+        letter-spacing: 1px;
+      }
+    }
+    .menu {
+      list-style: none;
+      float: right;
+      margin-top: 20px;
+      li {
+        display: inline-block;
+        &+li {
+          margin-left: 10px;
+        }
+        a {
+          font-size: 18px;
+          text-decoration: none;
+          padding: 10px 15px;
+          &:hover, &.active {
+            padding: 10px 15px;
+          }
+        }
+      }
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      -webkit-border-bottom-left-radius:10px;
+      -moz-border-radius:0 0 0 10px;
+      border-radius:0 0 0 10px;
+    }
+    .m-toggle {
+      float: right;
+      margin-top: 14px;
+      cursor: pointer;
+    }
+    .slideMenu {
+      display: none;
+      list-style-type: none;
+      text-align: center;
+      text-transform: uppercase;
+      padding-left: 0;
+      a {
+        display: inline-block;
+        width: 100%;
+        padding: 20px 0;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .carousel {
+    position: relative;
+    .arrow {
+      position: absolute;
+      font-size: 100px;
+      top: calc(50% - 80px);
+      text-decoration: none;
+      @include transition(.2s margin linear);
+      &.arrow-prev {
+        left: 8%;
+        &:hover {
+          margin-left: -5px;
+        }
+      }
+      &.arrow-next {
+        right: 8%;
+        &:hover {
+          margin-right: -5px;
+        }
+      }
+    }
+    .owl-carousel {
+      .slide-container {
+        .slide-caption {
+          text-align: center;
+          h1 {
+            font-size: 60px;
+            margin-top: 60px;
+            margin-bottom: 0;
+            letter-spacing: 6px;
+            line-height: 1;
+          }
+          h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+.merits {
+  h2 {
+    font-size: 40px;
+    letter-spacing: 6px;
+    line-height: 1;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 0;
+  }
+  h4 {
+    font-size: 20px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 5px;
+  }
+  .m-image {
+    text-align: center;
+    span {
+      display: inline-block;
+      border-radius: 50%;
+      &.si-inf {
+        padding: 44px 13px;
+        font-size: 60px;
+      }
+      &.si-bow {
+        padding: 0;
+        font-size: 148px;
+      }
+      &.si-cloud {
+        padding: 24px 24px;
+        font-size: 100px;
+      }
+    }
+  }
+  .m-description {
+    text-align: center;
+    h3 {
+      font-size: 30px;
+      letter-spacing: 4px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      letter-spacing: 2px;
+      text-align: center;
+      margin-top: 0;
+    }
+  }
+}

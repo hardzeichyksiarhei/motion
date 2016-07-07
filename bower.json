@@ -1,0 +1,24 @@
+{
+  "name": "motion_site",
+  "description": "Motion site",
+  "main": "index.js",
+  "authors": [
+    "hardz"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#^4.2.0",
+    "owl.carousel": "^2.1.6",
+    "components-font-awesome": "^4.6.3",
+    "jquery": "^3.0.0"
+  }
+}

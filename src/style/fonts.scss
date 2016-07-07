@@ -1,0 +1,38 @@
+@import "partials/mixins";
+
+@include font-face(BariolRegular, "../fonts/Bariol/BariolRegular/Bariol_Regular", null , null, otf);
+@include font-face(BariolRegularItalic, "../fonts/Bariol/BariolRegularItalic/Bariol_Regular_Italic", null , null, otf);
+
+@include font-face(SetIcons, "../fonts/SetIcons/icomoon", null , null, eot ttf woff svg);
+
+.setIcons {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'SetIcons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.si-cloud:before {
+    content: "\e9c1";
+  }
+
+  &.si-bow:before {
+    content: "\e901";
+  }
+  &.si-inf:before {
+    content: "\e902";
+  }
+  &.si-arrow-next:before {
+    content: "\e903";
+  }
+  &.si-arrow-prev:before {
+    content: "\e904";
+  }
+}

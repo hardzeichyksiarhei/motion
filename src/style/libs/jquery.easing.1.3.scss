@@ -1,0 +1,23 @@
+.color-pallete {
+    position: fixed;
+    z-index: 999;
+    top: 20%;
+    .color-container {
+        background-color: #FFFFFF;
+        padding: 10px;
+        h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 20px;
+        }
+    }
+    span.cog {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -45px;
+        padding: 5px 9px 2px 9px;
+        background-color: #FFFFFF;
+        cursor: pointer;
+    }
+}

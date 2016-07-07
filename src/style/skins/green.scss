@@ -1,0 +1,332 @@
+@import "../partials/mixins";
+
+// Color variables
+
+$mainColor: #6cc372;
+$complementaryColor1: #232324;
+$complementaryColor2: #eb4f4e;
+
+// End Color variables
+
+//Custom Styles Here
+
+.loader-container {
+  .ball {
+    background-color: $mainColor;
+  }
+}
+
+.main-header {
+  background-color: $mainColor;
+  .navBar {
+    //background-color: #f56262;
+    background-color: lighten($mainColor, 5%);
+    .logo {
+      color: #ffffff;
+    }
+    .menu {
+      li {
+        a {
+          color: #ffffff;
+          &:hover, &.active {
+            border-bottom: 2px solid #FFFFFF;
+          }
+        }
+      }
+    }
+    &:after {
+      content: '';
+      border-right: 60px solid lighten($mainColor, 5%);
+      border-bottom: 60px solid lighten($mainColor, 15%);
+      @include long-shadow(box, desaturate($mainColor, 10), 60, false, true, right);
+    }
+    .m-toggle {
+      color: #FFFFFF;
+    }
+    .slideMenu {
+      a {
+        color: #ffffff;
+        &.active {
+          background-color: $mainColor;
+        }
+      }
+    }
+  }
+  .carousel {
+    .arrow {
+      color: rgba(#ffffff, .4);
+    }
+    .owl-carousel {
+      .slide-container {
+        .slide-caption {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+.merits {
+  background-color: $complementaryColor1;
+  h2 {
+    color: #ffffff;
+  }
+  h4 {
+    color: saturate($mainColor, 10);
+  }
+  .m-image {
+    span {
+      background-color: saturate($mainColor, 15);
+      color: #FFF;
+    }
+  }
+  .m-description {
+    h3 {
+      color: #FFF;
+    }
+    p {
+      color: saturate($mainColor, 10);
+    }
+  }
+}
+
+.team {
+  background-color: $complementaryColor2;
+  h2 {
+    color: #ffffff;
+  }
+  h4 {
+    color: $complementaryColor1;
+  }
+  .card {
+    background-color: #ffffff;
+    .c-image {
+      img {
+        border: 8px solid $complementaryColor2;
+      }
+    }
+    .c-description {
+      h3 {
+        color: saturate($complementaryColor2, 10);
+      }
+      h4 {
+        color: saturate($mainColor, 10);
+      }
+      .btn {
+        background-color: $complementaryColor2;
+        color: #FFFFFF;
+        &:hover {
+          background-color: desaturate(darken($complementaryColor2, 10), 10);
+        }
+      }
+    }
+  }
+}
+
+.portfolio {
+  background-color: #f0f0f0;
+  .carousel {
+    .arrow {
+      color: $complementaryColor2;
+    }
+  }
+  h2 {
+    color: #616161;
+  }
+  h4 {
+    color: saturate($complementaryColor2, 10);
+  }
+  .slide-container {
+    .slide-caption {
+      h4 {
+        color: $complementaryColor1;
+      }
+    }
+  }
+
+  .owl-theme {
+    .owl-dots {
+      .owl-dot {
+        &.active,
+        &:hover {
+          span {
+            background: $complementaryColor2;
+          }
+        }
+      }
+    }
+  }
+
+  .card {
+    background-color: #fff;
+    border: 2px solid #e9e9e9;
+    .card-caption {
+      h2 {
+        &.red {
+          color: $mainColor;
+        }
+      }
+      h4 {
+        &.red {
+          color: $mainColor;
+        }
+        &.gray {
+          color: #616161;
+        }
+      }
+    }
+  }
+}
+
+.pricing {
+  background-color: #fff;
+  .card {
+    background-color: #f0f0f0;
+    border: 2px solid #f8f8f8;
+    &.cog {
+      span.fa {
+        color: $mainColor;
+      }
+    }
+    .card-caption {
+      h2 {
+        color: #616161;
+        &.red {
+          color: $mainColor;
+        }
+      }
+      h4 {
+        color: saturate($complementaryColor2, 10);
+        &.red {
+          color: $mainColor;
+        }
+        &.gray {
+          color: #616161;
+        }
+      }
+    }
+    .card-content {
+      color: #616161;
+      p + p {
+        border-top: 2px solid #e9e9e9;
+      }
+    }
+    .card-price {
+      background-color: #616161;
+      .price {
+        color: #FFFFFF;
+      }
+      &.red {
+        background-color: $mainColor;
+      }
+      a {
+        background-color: #ffffff;
+        color: #616161;
+        &.red {
+          color: $mainColor;
+        }
+        &:hover {
+          background-color: #eaeaea;
+        }
+      }
+    }
+  }
+  p.pricing-footer {
+    color: $mainColor;
+    a {
+      color: $mainColor;
+      &:hover {
+        color: desaturate(darken($mainColor, 10), 20);
+      }
+    }
+  }
+}
+
+.tweets {
+  background-color: $mainColor;
+  h2 {
+    color: #ffffff;
+  }
+  h4 {
+    color: $complementaryColor1;
+  }
+  .carousel {
+    .arrow {
+      span {
+        i:first-child {
+          color: $complementaryColor1;
+        }
+        i:last-child {
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+  .slide-container {
+    .slide-content {
+      color: #FFFFFF;
+    }
+    .slide-description {
+      p {
+        color: #FFFFFF;
+        span {
+          color: $complementaryColor1;
+        }
+        a {
+          color: $complementaryColor1;
+        }
+      }
+    }
+  }
+}
+
+.main-footer {
+  background-color: $complementaryColor1;
+  .footer-up {
+    background-color: $complementaryColor1;
+    i {
+      color: $mainColor;
+    }
+  }
+  .copyright {
+    color: #FFFFFF;
+    span {
+      color: $mainColor;
+    }
+  }
+  .social {
+    a {
+      color: #FFFFFF;
+      background-color: $mainColor;
+      &:hover {
+        background-color: desaturate(darken($mainColor, 10), 20);
+      }
+    }
+  }
+  .map-container {
+    #map {
+      background-color: #f0f0f0;
+    }
+    .map-contact {
+      h3 {
+        color: #FFFFFF;
+      }
+      h4 {
+        color: $mainColor;
+      }
+    }
+  }
+}
+
+.color-pallete {
+  .color-container {
+    border: 1px solid $mainColor;
+    border-left: none;
+  }
+  span.cog {
+    border: 1px solid $mainColor;
+    border-left: none;
+    color: $mainColor;
+  }
+}
+
